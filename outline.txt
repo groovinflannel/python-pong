@@ -1,0 +1,15 @@
+Project Outline
+
+I. Required classes:
+    a. Screen (from turtle)
+    b. Paddle (left and right?)
+    c. Ball
+    d. Scoreboard
+
+II. Dev plan:
+    a. Screen
+        i. Black background with dotted line dividing the center
+    b. Paddle class
+        i. Consider a LeftPaddle and RightPaddle class that inherits from Paddle
+    c. Ball class
+    d. Scoreboard class
