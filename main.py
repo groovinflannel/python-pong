@@ -2,6 +2,19 @@ from turtle import Turtle, Screen
 
 screen = Screen()
 screen.bgcolor("black")
+screen.setup(width=800, height=600)
+tom = Turtle()
+tom.color("white")
+tom.penup()
+tom.setposition(x=0, y=300)
+tom.pendown()
+tom.pencolor("white")
+tom.setheading(270)
 
+for i in range(30):
+    tom.forward(15)
+    tom.penup()
+    tom.forward(15)
+    tom.pendown()
 
 screen.exitonclick()
