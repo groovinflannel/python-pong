@@ -23,4 +23,9 @@ for i in range(30):
     tom.forward(15)
     tom.pendown()
 
+screen.listen()
+
+screen.onkey(paddle.up, "Up")
+screen.onkey(paddle.down, "Down")
+
 screen.exitonclick()
