@@ -1,23 +1,21 @@
-import turtle
 from turtle import Turtle
 
 
-class Paddle:
+class Paddle(Turtle):
 
     def __init__(self):
-        turt = Turtle()
-        turt.shape("square")
-        turt.color("white")
-        turt.penup()
-        turt.resizemode("user")
-        turt.shapesize(stretch_wid=5, stretch_len=1)
-        turt.setposition(350, 0)
-        self.paddle_body = turt
+        super().__init__()
+        self.shape("square")
+        self.color("white")
+        self.penup()
+        self.resizemode("user")
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.setposition(350, 0)
 
     def up(self):
-        new_y = self.paddle_body.ycor() + 20
-        self.paddle_body.goto(self.paddle_body.xcor(), new_y)
+        new_y = self.ycor() + 20
+        self.goto(self.xcor(), new_y)
 
     def down(self):
-        new_y = self.paddle_body.ycor() - 20
-        self.paddle_body.goto(self.paddle_body.xcor(), new_y)
+        new_y = self.ycor() - 20
+        self.goto(self.xcor(), new_y)
