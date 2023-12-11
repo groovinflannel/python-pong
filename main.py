@@ -16,7 +16,8 @@ tom.pendown()
 tom.pencolor("white")
 tom.setheading(270)
 
-paddle = Paddle()
+left_paddle = Paddle((-350, 0))
+right_paddle = Paddle((350, 0))
 
 for i in range(30):
     tom.forward(15)
@@ -26,8 +27,8 @@ for i in range(30):
 
 screen.listen()
 
-screen.onkey(paddle.up, "Up")
-screen.onkey(paddle.down, "Down")
+screen.onkey(right_paddle.up, "Up")
+screen.onkey(right_paddle.down, "Down")
 
 game_is_on = True
 while game_is_on:
