@@ -43,6 +43,10 @@ while game_is_on:
 
     # Detects wall collision, changes ball direction
     if ball.ycor() > 295 or ball.ycor() < -295:
-        ball.bounce()
+        ball.wall_bounce()
+
+    # Paddle collision
+    if (ball.distance(right_paddle) < 50 and ball.xcor() > 320) or (ball.distance(left_paddle) < 50 and ball.xcor() < -320):
+        ball.paddle_bounce()
 
 screen.exitonclick()
