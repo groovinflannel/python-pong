@@ -4,6 +4,8 @@ from ball import Ball
 from paddle import Paddle
 from scoreboard import Scoreboard
 
+import time
+
 screen = Screen()
 screen.tracer(0)
 screen.bgcolor("black")
@@ -42,6 +44,7 @@ ball = Ball()
 
 game_is_on = True
 while game_is_on:
+    time.sleep(ball.movement_speed)
     screen.update()
     ball.move()
 
