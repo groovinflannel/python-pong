@@ -2,6 +2,7 @@ from turtle import Turtle, Screen
 
 from ball import Ball
 from paddle import Paddle
+from scoreboard import Scoreboard
 
 screen = Screen()
 screen.tracer(0)
@@ -19,6 +20,9 @@ tom.setheading(270)
 
 left_paddle = Paddle((-350, 0))
 right_paddle = Paddle((350, 0))
+
+left_score = Scoreboard((-200, 270))
+right_score = Scoreboard((200, 270))
 
 for i in range(30):
     tom.forward(15)
@@ -52,9 +56,11 @@ while game_is_on:
     # Detect left paddle point (right paddle miss)
     if ball.xcor() > 380:
         ball.reset_position()
+        left_score.increment()
 
     # Detect right paddle point (left paddle miss)
     if ball.xcor() < -380:
         ball.reset_position()
+        right_score.increment()
 
 screen.exitonclick()
