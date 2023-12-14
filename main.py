@@ -41,4 +41,8 @@ while game_is_on:
     screen.update()
     ball.move()
 
+    # Detects wall collision, changes ball direction
+    if ball.ycor() > 295 or ball.ycor() < -295:
+        ball.bounce()
+
 screen.exitonclick()
